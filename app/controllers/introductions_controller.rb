@@ -5,7 +5,6 @@ class IntroductionsController < ApplicationController
 
   def index
     @introductions = Introduction.includes(:performer)
-    @introductions = Introduction.includes(:user)
   end
   
   def new
