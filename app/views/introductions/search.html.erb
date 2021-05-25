@@ -1,0 +1,11 @@
+<p>検索</p>
+<%= form_tag(search_introductions_path,:method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search', :name=> nil %>
+<% end %>
+
+<div class="card__wrapper">
+ <% @introductions.each do |introduction| %>
+ <%= render partial: 'introduction', collection: @introductions %>
+ <% end %>
+ </div>
