@@ -58,12 +58,13 @@ Things you may want to cover:
 
 - belongs_to :performer
 
-## requesters テーブル
+## users テーブル
 
 | Column             | Type   | Options                      |
 | --------           | ------ | ---------------------------- |
-| company            | string | null: false                  |
-| staff              | string | null: false                  |
+| company            | string |                              |
+| name               | string | null: false                  |
+| name_kana          | string | null: false                  |
 | email              | string | null: false,unique: true     |
 | encrypted_password | string | null: false                  |
 
