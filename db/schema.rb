@@ -44,10 +44,12 @@ ActiveRecord::Schema.define(version: 2021_05_27_024715) do
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text"
+    t.bigint "performer_id"
     t.bigint "introduction_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["introduction_id"], name: "index_messages_on_introduction_id"
+    t.index ["performer_id"], name: "index_messages_on_performer_id"
   end
 
   create_table "performers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -67,4 +69,5 @@ ActiveRecord::Schema.define(version: 2021_05_27_024715) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "introductions"
+  add_foreign_key "messages", "performers"
 end
