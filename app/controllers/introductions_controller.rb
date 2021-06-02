@@ -1,10 +1,10 @@
 class IntroductionsController < ApplicationController
-  before_action :set_introduction, except: [:index, :new, :create]
-  before_action :authenticate_performer!, except: [:index, :show]
+  before_action :set_introduction, except: [:index, :new, :create, :search]
+  before_action :authenticate_performer!, except: [:index, :show, :search]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
-    @introductions = Introduction.includes(:performer)
+    @introductions = Introduction.includes(:performer).order("created_at DESC")
   end
   
   def new
@@ -21,6 +21,9 @@ class IntroductionsController < ApplicationController
   end
 
   def show
+    @message = Message.new
+    @messages = @introduction.messages
+    
   end
 
   def edit
@@ -41,6 +44,11 @@ class IntroductionsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def search
+    @introductions = Introduction.search(params[:search])
+  end
+  
 
 
   private
