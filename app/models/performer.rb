@@ -8,5 +8,6 @@ class Performer < ApplicationRecord
   validates :name, presence: true
   validates :name_kana, presence: true
   has_many :introductions
+ 
 end
 
