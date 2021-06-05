@@ -86,7 +86,7 @@ a {
 }
 .nav__btn:hover{
   color: #fff;
-  background: #FFCCFF;
+  background: #FF3333;
 }
 
 .nav__logout{
@@ -103,7 +103,7 @@ a {
 }
 .nav__logout:hover{
   opacity: 0.5;
-  background: #FFCCFF;
+  background: #FF3333;
 }
 
 /* フォーム周り */
@@ -130,7 +130,8 @@ a {
   color: black;
   text-decoration: none;
   user-select: none;
-  background: #FFCCFF;
+  
+  background: #FF3333;
   border: 1px black solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
@@ -207,7 +208,7 @@ position: relative;
 
 .service_features{
 font-size: 30px;
-border-top: solid 3px red;
+border-top: solid 3px#FF3333;
 text-align: center;
 font-weight: bold;
 padding: 10px;
@@ -319,7 +320,14 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   transform: scale(1.1);
 }
 
-
+.profile_list{
+font-size: 30px;
+text-align: center;
+font-weight: bold;
+padding: 10px;
+font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  
+}
 
 
 .greeting{
@@ -395,7 +403,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
 .prototype__user{
   display: block;
   font-size: 16px;
-  color: #999;
+  color: #FF3333;
   text-align: center;
   text-decoration: underline;
 }
@@ -423,17 +431,17 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
-  color: #999;
+  color: #000;
   text-decoration: none;
   user-select: none;
-  border: 1px #999 solid;
+  border: 1px #000 solid;
   border-radius: 3px;
   transition: 0.4s ease;
   margin: 0 4px;
 }
 .prototype__btn:hover{
   color: #fff;
-  background: #999;
+  background: #FF3333;
 }
 
 .prototype__comments{
