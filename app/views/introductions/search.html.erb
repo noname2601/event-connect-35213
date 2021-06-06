@@ -1,11 +1,11 @@
-<p>検索</p>
-<%= form_tag(search_introductions_path,:method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :name=> nil %>
-<% end %>
 
-<div class="card__wrapper">
- <% @introductions.each do |introduction| %>
- <%= render partial: 'introduction', collection: @introductions %>
- <% end %>
- </div>
+<main class="main">
+    <div class="card__wrapper">
+    <% @introductions.each do |introduction| %>
+      <%= render partial: 'introduction', locals: { introduction: introduction } %>
+      <% end %>
+    </div>
+  </div>
+</main>
+<div class="turn_back">
+<%= link_to "トップページへ戻る", root_path, class: :turn_back %>

@@ -1,0 +1,25 @@
+<%= form_with model: @introduction, local: true do |f|%>
+  <div class="field">
+    <%= f.label :skill, "ご自身のスキルを記載してください" %><br />
+    <%= f.text_field :skill, class: :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description, "コメントを記載してください" %><br />
+    <%= f.text_area :description, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day_price, "日当たりの希望単価を記載してください" %><br />
+    ¥ <%= f.text_field :day_price, class: :title %> 
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "プロフィール画像を載せてください" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿", class: :form__btn  %>
+  </div>
+<% end %>

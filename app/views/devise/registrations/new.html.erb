@@ -12,7 +12,6 @@
 
         <div class="field">
           <%= f.label :email, "メールアドレス " %><br />
-          <%= "依頼者が連絡可能なアドレスを登録してください" %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
 
@@ -34,6 +33,12 @@
         <div class="field">
           <%= f.label :name_kana, "フルネーム（カナ）" %><br />
           <%= f.text_area :name_kana, autofocus: true, autocomplete: "name_kana" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :twitter_id, "ツィッターID " %><br />
+          <%= "依頼者の連絡の為プロフィールに表示されます" %><br />
+          <%= f.text_area :twitter_id, autofocus: true, autocomplete: "twitter_id" %>
         </div>
 
         

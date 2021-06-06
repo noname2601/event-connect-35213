@@ -1,0 +1,39 @@
+<div class="main">
+  <div class="inner">
+    <div class="user__wrapper">
+      <h2 class="page-heading">
+        <%= "#{@performer.nickname}さんの情報"%>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">ニックネーム</th>
+            <td class="table__col2"><%= @performer.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">ツィッターID</th>
+            <td class="table__col2"><%= @performer.twitter_id %></td>
+          </tr>
+          <% if current_performer == @introduction.performer%>
+          <tr>
+            <th class="table__col1">お名前</th>
+            <td class="table__col2"><%= @performer.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">お名前カナ</th>
+            <td class="table__col2"><%= @performer.name_kana %></td>
+          </tr>
+          <tr>
+            
+          <% end %>
+        </tbody>
+      </table>
+      <h2 class="page-heading">
+        <%= "#{@performer.nickname}さんのスキルとコメント"%>
+      </h2>
+      <div class="user__card">
+        <%= render partial: 'introductions/introduction', collection: @performer.introductions %>
+      </div>
+    </div>
+  </div>
+</div>
