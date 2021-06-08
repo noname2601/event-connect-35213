@@ -4,11 +4,11 @@
       <p class="introduction__hedding">
         <%= @introduction.skill %>
       </p>
-      <%= link_to " #{@introduction.performer.nickname}の詳細情報はこちら", performer_path(@introduction.performer), class: :introduction__user %>
       <div class="introduction__image">
         <%= image_tag @introduction.image %>
       </div>
       <% if current_performer == @introduction.performer%>
+      <%= link_to " #{@introduction.performer.nickname}の詳細情報はこちら", performer_path(@introduction.performer), class: :introduction__user %>
         <div class="introduction__manage">
           <%= link_to "編集する", edit_introduction_path(@introduction), method: :get, class: :introduction__btn %>
           <%= link_to "削除する", introduction_path(@introduction), method: :delete, class: :introduction__btn %>
@@ -31,6 +31,7 @@
 
       
       <div class="introduction__comments">
+        <% if performer_signed_in? %>
         
           <%= form_with model: [@introduction, @message], local: true do |f|%>
             <div class="field">
@@ -42,10 +43,12 @@
               <%= f.submit "送信する", class: :form__btn  %>
             </div>
           <% end %> 
+          <% end %>
         <ul class="comments_lists">
           <% @messages.each do |message| %>
             <li class="comments_list">
               <%= message.text%>
+            <%= link_to "（#{message.performer.name}）", performer_path(message.performer), class: :comment_user %>
             </li>
           <% end %>
         </ul>
