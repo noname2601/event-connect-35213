@@ -10,11 +10,7 @@
             <th class="table__col1">ニックネーム</th>
             <td class="table__col2"><%= @performer.nickname %></td>
           </tr>
-          <tr>
-            <th class="table__col1">ツィッターID</th>
-            <td class="table__col2"><%= @performer.twitter_id %></td>
-          </tr>
-          <%# if current_performer == @introduction.performer%>
+          
           <tr>
             <th class="table__col1">お名前</th>
             <td class="table__col2"><%= @performer.name %></td>
@@ -24,8 +20,6 @@
             <td class="table__col2"><%= @performer.name_kana %></td>
           </tr>
           <tr>
-            
-          <%# end %>
         </tbody>
       </table>
       <h2 class="page-heading">

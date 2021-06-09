@@ -7,26 +7,31 @@
       <div class="introduction__image">
         <%= image_tag @introduction.image %>
       </div>
+      
       <% if current_performer == @introduction.performer%>
-      <%= link_to " #{@introduction.performer.nickname}の詳細情報はこちら", performer_path(@introduction.performer), class: :introduction__user %>
+      <%= link_to " #{@introduction.performer.nickname}さんの登録情報確認", performer_path(@introduction.performer), class: :introduction__user %>
         <div class="introduction__manage">
           <%= link_to "編集する", edit_introduction_path(@introduction), method: :get, class: :introduction__btn %>
           <%= link_to "削除する", introduction_path(@introduction), method: :delete, class: :introduction__btn %>
         </div>
       <% end %>
+        <% if performer_signed_in? %>
+        <div class="introduction__body">
+        <div class="introduction__detail">
+          <p class="detail__title">ツィッターID</p>
+          <p class="detail__message">
+            <%= @introduction.twitter_id %>
+          </p>
+        </div>
+        <%end%>
       <div class="introduction__body">
         <div class="introduction__detail">
-          <p class="detail__title">コメント</p>
+          <p class="detail__title">どんなことがができますか？</p>
           <p class="detail__message">
             <%= @introduction.description %>
           </p>
         </div>
-        <div class="introduction__detail">
-          <p class="detail__title">1日あたり希望単価</p>
-          <p class="detail__message">
-            ¥<%= @introduction.day_price %>
-          </p>
-        </div>
+        
       </div>
 
       
@@ -48,7 +53,7 @@
           <% @messages.each do |message| %>
             <li class="comments_list">
               <%= message.text%>
-            <%= link_to "（#{message.performer.name}）", performer_path(message.performer), class: :comment_user %>
+            <%= link_to "（#{message.performer.name}）さん",  class: :comment_user %>
             </li>
           <% end %>
         </ul>

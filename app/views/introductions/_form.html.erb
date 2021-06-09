@@ -1,4 +1,7 @@
+<div class="box">
+     <div class="box-inner">
 <%= form_with model: @introduction, local: true do |f|%>
+<h1>プロフィール投稿</h1>
   <div class="field">
     <%= f.label :skill, "ご自身のスキルを記載してください" %><br />
     <%= f.text_field :skill, class: :title %>
@@ -10,8 +13,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :day_price, "日当たりの希望単価を記載してください" %><br />
-    ¥ <%= f.text_field :day_price, class: :title %> 
+    <%= f.label :twitter_id, "連絡用のTwetterアカウントを記載してください" %><br />
+    <%= f.text_field :twitter_id, class: :title %> 
   </div>
 
   <div class="field">
@@ -23,3 +26,5 @@
     <%= f.submit "投稿", class: :form__btn  %>
   </div>
 <% end %>
+ </div> 
+ </div>
