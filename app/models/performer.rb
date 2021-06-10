@@ -4,10 +4,15 @@ class Performer < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
-  validates :nickname, presence: true
-  validates :name, presence: true
-  validates :name_kana, presence: true
+  validates :nickname, :name, :name_kana, presence: true
+
+  validates :name, format: {with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
+
+  validates :name_kana, format: {with: /\A[\p{katakana} ー－&&[^ -~｡-ﾟ]]+\z/}
+
+
   has_many :introductions
+  has_many :messages
  
 end
 
