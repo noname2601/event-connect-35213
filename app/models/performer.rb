@@ -10,6 +10,8 @@ class Performer < ApplicationRecord
 
   validates :name_kana, format: {with: /\A[\p{katakana} ー－&&[^ -~｡-ﾟ]]+\z/}
 
+  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
+  validates :password, format: { with: VALID_PASSWORD_REGEX }
 
   has_many :introductions
   has_many :messages
