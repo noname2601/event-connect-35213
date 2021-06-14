@@ -1,6 +1,9 @@
-
+<%# 検索ページ表示 %>
 <main class="main">
-    <div class="card__wrapper">
+  <div class= "search_title">
+   検索画面
+  </div> 
+  <div class="card__wrapper">
     <% @introductions.each do |introduction| %>
       <%= render partial: 'introduction', locals: { introduction: introduction } %>
       <% end %>
@@ -8,4 +11,6 @@
   </div>
 </main>
 <div class="turn_back">
-<%= link_to "トップページへ戻る", root_path, class: :turn_back %>
+ <%= link_to "トップページへ戻る", root_path, class: :turn_back %>
+</div>
+<%# /検索ページ表示 %>
