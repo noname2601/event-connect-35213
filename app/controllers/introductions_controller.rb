@@ -13,8 +13,9 @@ class IntroductionsController < ApplicationController
 
   def create
     @introduction = Introduction.new(introduction_params)
-    if @introduction.save
-      redirect_to root_path
+    if @introduction.valid?
+       @introduction.save
+       redirect_to root_path
     else
       render :new
     end
@@ -23,6 +24,7 @@ class IntroductionsController < ApplicationController
   def show
     @message = Message.new
     @messages = @introduction.messages
+    
     
   end
 
@@ -54,7 +56,7 @@ class IntroductionsController < ApplicationController
   private
 
   def introduction_params
-    params.require(:introduction).permit(:skill, :description, :day_price, :image).merge(performer_id: current_performer.id)
+    params.require(:introduction).permit(:skill, :description, :twitter_id, :image).merge(performer_id: current_performer.id)
   end 
 
   def set_introduction

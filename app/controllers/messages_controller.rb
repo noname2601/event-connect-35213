@@ -12,9 +12,11 @@ class MessagesController < ApplicationController
 
   
 
+  
+
   private
 
   def message_params
-    params.require(:message).permit(:text).merge( introduction_id: params[:introduction_id])
+    params.require(:message).permit(:text).merge(performer_id:current_performer.id, introduction_id: params[:introduction_id])
   end
 end
