@@ -1,74 +1,81 @@
+<%# トップページ %>
+ <%# 風船の画像 %>
 <div class="top_image">
-<%= image_tag "photo-1604080907141-8476a60708dc.jpeg",  class:"main_image" %>
-<h2 class='service-title'>
-<%='演者を支援する'%>
-</h2>
-<h2 class='service-explain'>
-<%="Matching service！！"%>
-</h2>
+ <%= image_tag "photo-1604080907141-8476a60708dc.jpeg",  class:"main_image" %>
+ <h2 class='service-title'>
+   <%='演者を支援する'%>
+ </h2>
+  <h2 class='service-explain'>
+   <%="Matching service！！"%>
+  </h2>
 </div>
-
+<%# /風船の画像 %>
+<%# パフォーマーの絵が3つ並ぶ画像 %>
 <div class="performers_view">
-<%="PERFORMERS"%>
+ <%="PERFORMERS"%>
 </div>
 <div class="performers_image">
-<%= image_tag "Magic trick-rafiki.png", :size =>'320x480',  class:"performer_image" %>
-<%= image_tag "Balloons-amico.png", :size =>'320x480',  class:"performer_image" %>
-<%= image_tag "Create-pana.png", :size =>'320x480',  class:"performer_image" %>
+ <%= image_tag "Magic trick-rafiki.png", :size =>'320x480',  class:"performer_image" %>
+ <%= image_tag "Balloons-amico.png", :size =>'320x480',  class:"performer_image" %>
+ <%= image_tag "Create-pana.png", :size =>'320x480',  class:"performer_image" %>
+</div>
+<%# /パフォーマーの絵が3つ並ぶ画像 %>
+<div class= "service_features_one">
+ <p>パフォーマーの方は<span class="under"><%= link_to "新規登録", new_performer_registration_path %></span> or
+ <span class="under"><%= link_to "ログイン", new_performer_session_path %></span>してプロフィールを投稿しよう！</p>
 </div>
 <div class= "service_features_one">
-<p>パフォーマーの方は<span class="under"><%= link_to "新規登録", new_performer_registration_path %></span>または
-<span class="under"><%= link_to "ログイン", new_performer_session_path %></span>してプロフィールを投稿しよう！</p>
+ <p>依頼者は<span class="under"><%= link_to "新規登録", new_performer_registration_path %></span> or
+ <span class="under"><%= link_to "ログイン", new_performer_session_path %></span>してパフォーマーと繋がろう！</p>
 </div>
-
+<%# EVENT CONNECT の特徴 %>
 <div class= "service_features">
-EVENT CONNECT とは
+ EVENT  CONNECT  の特徴
 </div>
 <div class="service">
-<ul>
-<%= image_tag "cytonn-photography-n95VMLxqM2I-unsplash.jpg",  class:"servise_image_one" %>
-
-<li class="service_comment_one">1.すぐ見つかる</li>
-<li class="service_comment">パフォーマーへリンク先の</li>
-<li class="service_comment">ツィッターアカウントから</li>
-<li class="service_comment">簡単に繋がる</li>
-</ul>
-<ul>
-<%= image_tag "sofiya-levchenko-l6yLVM-FJxc-unsplash.jpg",  class:"servise_image_two" %>
-<li class="service_comment_one">2 .仲介料０円</li>
-<li class="service_comment">個人作成のポートフォリオ</li>
-<li class="service_comment">なので、料金はもちろん</li>
-<li class="service_comment">無料！！</li>
-</ul>
-<ul>
-<%= image_tag "benjamin-dada-EDZTb2SQ6j0-unsplash.jpg",  class:"servise_image_three" %>
-<li class="service_comment_one">3 .簡単検索</li>
-<li class="service_comment">イベント内容に合った</li>
-<li class="service_comment">パフォーマーを</li>
-<li class="service_comment">見つけよう！</li>
-<%= form_tag(search_introductions_path,:method => 'get') do %>
-<%= text_field_tag :search %>
-<%= submit_tag '検索', :name=> nil %>
-<% end %>
-</ul>
+  <ul>
+   <%= image_tag "cytonn-photography-n95VMLxqM2I-unsplash.jpg",  class:"servise_image_one" %>
+   <li class="service_comment_one">1.すぐ見つかる</li>
+   <li class="service_comment">パフォーマーへリンク先の</li>
+   <li class="service_comment">ツィッターアカウントから</li>
+   <li class="service_comment">簡単に繋がる</li>
+   <li class="service_comment">＊アカウント確認にはログインが必要です。</li>
+  </ul>
+  <ul>
+   <%= image_tag "sofiya-levchenko-l6yLVM-FJxc-unsplash.jpg",  class:"servise_image_two" %>
+   <li class="service_comment_one">2 .コメント機能あり</li>
+   <li class="service_comment">ログインすると</li>
+   <li class="service_comment">コメントが投稿できます。</li>
+   <li class="service_comment">気になるパフォーマーに</li>
+   <li class="service_comment">質問してみよう！</li>
+  </ul>
+  <ul>
+   <%= image_tag "benjamin-dada-EDZTb2SQ6j0-unsplash.jpg",  class:"servise_image_three" %>
+   <li class="service_comment_one">3 .簡単検索</li>
+   <li class="service_comment">イベント内容に合った</li>
+   <li class="service_comment">パフォーマーを</li>
+   <li class="service_comment">見つけよう！</li>
+   <%# パフォーマー検索ボタン %>
+   <%= form_tag(search_introductions_path,:method => 'get') do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索', :name=> nil %>
+   <% end %>
+   <%# /パフォーマー検索ボタン %>
+ </ul>
 </div>
-
+<%# /EVENT CONNECT の特徴 %>
+<%# プロフィール一覧表示 %>
 <div class="profile_list">
  プロフィール一覧
- </div>
-
+</div>
 <main class="main">
-  <div class="inner">
-    <% if performer_signed_in? %>
-      <div class="greeting">
-        <%= link_to "#{current_performer.nickname}さん", performer_path(current_performer), class: :greeting__link%> の情報(ログイン者のみ表示)
-      </div>
-    <% end %>
+ <div class="inner">
     <div class="card__wrapper">
-      <%= render partial: 'introduction', collection: @introductions %>
+     <%= render partial: 'introduction', collection: @introductions %>
     </div>
-  </div>
+ </div>
 </main>
+<%# /プロフィール一覧表示 %>
 
 
 

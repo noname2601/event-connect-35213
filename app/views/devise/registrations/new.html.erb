@@ -1,60 +1,55 @@
+<%# 新規登録画面 %>
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
-      
-
-
       <div class="box_one">
-     <div class="box-inner">
+      <div class="box-inner">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <h1>新規登録</h1>
+
+      <%= render 'layouts/error_messages', model: f.object %>
+
       <div class="box-email">
-        <%= f.label :email, "Eメール" %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.label :email, "Eメール" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
-      
       <div class="box-password">
-        <div class="a-row">
-          <div class="column-left">
-            <%= f.label :password, "パスワード（6文字以上）" %>
-          </div>
-        </div>
-        <%= f.password_field :password, autocomplete: "current-password" %>
+      <div class="a-row">
+      <div class="column-left">
+      <%= f.label :password, "パスワード（6文字以上）" %>
       </div>
-        <div class="box-password_one">
-          <%= f.label :password_confirmation, "パスワード再入力" %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-        </div>
+      </div>
+      <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+      <div class="box-password_one">
+      <%= f.label :password_confirmation, "パスワード再入力" %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
       <div class="field">
-          <%= f.label :nickname, "ニックネーム" %><br />
-          <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname" %>
-        </div>
-
-
-        <div class="field">
-          <%= f.label :family_name, "フルネーム（漢字）" %><br />
-          <%= f.text_area :name, autofocus: true, autocomplete: "name" %>
-        </div>
-
-        <div class="field">
-          <%= f.label :name_kana, "フルネーム（カナ）" %><br />
-          <%= f.text_area :name_kana, autofocus: true, autocomplete: "name_kana" %>
-        </div>
-
-        
+      <%= f.label :nickname, "ニックネーム" %><br />
+      <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname" %>
+      </div>
+      <div class="field">
+      <%= f.label :family_name, "フルネーム（漢字）" %><br />
+      <%= f.text_area :name, autofocus: true, autocomplete: "name" %>
+      </div>
+      <div class="field">
+       <%= f.label :name_kana, "フルネーム（カナ）" %><br />
+       <%= f.text_area :name_kana, autofocus: true, autocomplete: "name_kana" %>
+       </div>
       <div class="box-login">
         <%= f.submit "新規登録" %>
-      <% end %>
+        <% end %>
       <div class="legal-text">
-          続行することで、EVENT_CONNECTの
-          <%= link_to "利用規約", "#" %>
-          および
-          <%= link_to "プライバシー規約", "#" %>
-          に同意するものとみなされます。
-        </div>
+        続行することで、EVENT_CONNECTの
+        <%= link_to "利用規約", "#" %>
+        および
+        <%= link_to "プライバシー規約", "#" %>
+        に同意するものとみなされます。
+      </div>
     </div>
+   </div>
   </div>
-</div>
-</div>
+ </div>
 </div>
 
