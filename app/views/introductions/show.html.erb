@@ -6,7 +6,7 @@
         <%= @introduction.skill %>
       </p>
       <div class="introduction__image">
-        <%= image_tag @introduction.image %>
+        <%= image_tag @introduction.image %> 
       </div>
       <%# プロフィール投稿をしている演者本人のみ表示 %>
       <% if current_performer == @introduction.performer%>
@@ -37,11 +37,11 @@
         </div>
       </div>
       <div class="introduction__comments">
-       <%# ログインユーザーのみコメント可能 %>
+       <%# ログインユーザーのみ質問が可能 %>
         <% if performer_signed_in? %>
          <%= form_with model: [@introduction, @message], local: true do |f|%>
          <div class="field">
-          <%= f.label :text, "コメント" %><br />
+          <%= f.label :text, "質問フォーム" %><br />
           <%= f.text_field :text %>
       </div>
       <div class="actions">
@@ -58,7 +58,7 @@
           <% end %>
         </ul>
       </div>
-      <%# /ログインユーザーのみコメント可能 %>
+      <%# /ログインユーザーのみ質問が可能 %>
     </div>
   </div>
 </main>
