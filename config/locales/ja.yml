@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    attributes:
+      performer:
+        nickname: ニックネーム
+        email: Eメール
+        password: パスワード
+        name: 名前
+        name_kana: 名前（カナヨミ）
+      introduction:
+        skill: スキル
+        description: 特技の説明
+        twitter_id: ツイッターID
+        image: 画像

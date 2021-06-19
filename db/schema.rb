@@ -36,14 +36,14 @@ ActiveRecord::Schema.define(version: 2021_05_27_024715) do
   create_table "introductions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "skill", null: false
     t.text "description", null: false
-    t.integer "day_price", null: false
+    t.string "twitter_id", null: false
     t.integer "performer_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "text"
+    t.text "text", null: false
     t.bigint "performer_id"
     t.bigint "introduction_id"
     t.datetime "created_at", precision: 6, null: false
