@@ -17,25 +17,33 @@
         </div>
        <% end %>
        <%# /プロフィール投稿をしている演者本人のみ表示 %>
-       <%# ログインユーザーのみ表示 %>
-        <% if performer_signed_in? %>
-        <div class="introduction__body">
-        <div class="introduction__detail">
-          <p class="detail__title">ツィッターID</p>
-          <p class="detail__message">
-            <%= @introduction.twitter_id %>
-          </p>
-        </div>
-        <%end%>
-        <%# /ログインユーザーのみ表示 %>
       <div class="introduction__body">
         <div class="introduction__detail">
-          <p class="detail__title">パフォーマーからのコメント</p>
+          <p class="detail__title">コメント</p>
           <p class="detail__message">
           <%= @introduction.description %>
           </p>
         </div>
       </div>
+       <%# ログインユーザーのみ表示 %>
+        <% if performer_signed_in? %>
+        <div class="introduction__body">
+         <div class="introduction__detail">
+           <p class="detail__title">ツィッターID</p>
+            <div class="hidden_box">
+             <label for="label1">確認する</label>
+             <input type="checkbox" id="label1"/>
+               <div class="hidden_show">
+                 <!--非表示ここから-->     
+                 <%= @introduction.twitter_id %>
+                 <!--ここまで-->
+               </div>
+           </div>
+           </p>
+          </div>
+        </div>
+        <%end%>
+        <%# /ログインユーザーのみ表示 %>
       <div class="introduction__comments">
        <%# ログインユーザーのみ質問が可能 %>
         <% if performer_signed_in? %>

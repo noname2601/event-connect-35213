@@ -1,6 +1,8 @@
 class Introduction < ApplicationRecord
   belongs_to :performer
   has_many :messages, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :like_performers, through: :likes, source: :performer
   has_one_attached :image
 
   validates :skill, presence: true
@@ -14,5 +16,9 @@ class Introduction < ApplicationRecord
     else
       Introduction.all
     end
+  end
+
+  def liked_by?(performer)
+    likes.where(performer_id: performer.id).exists?
   end
 end

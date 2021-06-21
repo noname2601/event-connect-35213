@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_27_024715) do
+ActiveRecord::Schema.define(version: 2021_06_19_082431) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -42,6 +42,16 @@ ActiveRecord::Schema.define(version: 2021_05_27_024715) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "performer_id"
+    t.bigint "introduction_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["introduction_id"], name: "index_likes_on_introduction_id"
+    t.index ["performer_id", "introduction_id"], name: "index_likes_on_performer_id_and_introduction_id", unique: true
+    t.index ["performer_id"], name: "index_likes_on_performer_id"
+  end
+
   create_table "messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "text", null: false
     t.bigint "performer_id"
@@ -68,6 +78,8 @@ ActiveRecord::Schema.define(version: 2021_05_27_024715) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "likes", "introductions"
+  add_foreign_key "likes", "performers"
   add_foreign_key "messages", "introductions"
   add_foreign_key "messages", "performers"
 end

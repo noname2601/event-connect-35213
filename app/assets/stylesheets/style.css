@@ -328,6 +328,7 @@ font-size: 30px;
 text-align: center;
 font-weight: bold;
 padding-top: 10px;
+margin-bottom: 15px;
 font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
 
@@ -341,6 +342,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
 
 .page-heading {
   font-size: 30px;
+  margin-top: 10px;
   margin-bottom: 28px;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
@@ -362,6 +364,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   margin-bottom: 16px;
   max-width: 300px;
   max-height: 300px;
+  object-fit: cover;
   opacity: 1;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
@@ -393,6 +396,10 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   padding-top: 10px;
 }
 
+.card__body {
+  display: inline-block;
+}
+
 /* 詳細ページ */
 .introduction__wrapper{
   min-height: calc(100vh - 161px);
@@ -402,6 +409,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  margin-top: 10px;
 }
 
 .introduction__user{
@@ -430,17 +438,22 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   font-weight: bold;
   padding-top: 10px;
   padding: 0.5em 1em;
-    margin: 2em 0;
-    color: #FFF;
-    background:#0000FF;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 9px;
+  margin: 2em 0;
+  color: #FFF;
+  background: #00008B;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+}
+
+.detail__message{
+  text-decoration: underline;
 }
 
 .introduction__manage{
   display: flex;
   justify-content: center;
   padding-top: 16px;
+  
 }
 
 .introduction__btn{
@@ -481,6 +494,48 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   color: #999;
   text-decoration: underline;
 }
+
+.hidden_box {
+  margin: 2em 0;
+  padding: 0;
+}
+
+.hidden_box label {
+  padding: 10px;
+  font-weight: bold;
+  border: solid 2px black;
+  cursor :pointer; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  
+}
+
+.hidden_box label:hover {
+  color: #fff;
+  background: #FF3300;
+}
+
+.hidden_box input {
+  display: none;
+}
+
+.hidden_box .hidden_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+  text-align: center;
+  text-decoration: underline;
+  color: red;
+}
+
+.hidden_box input:checked ~ .hidden_show {
+  padding: 25px 0;
+  height: auto;
+  opacity: 1;
+}
+
 
 /* ユーザーページ */
 .user__wrapper{
