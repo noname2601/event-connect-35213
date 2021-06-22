@@ -285,7 +285,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   }
 
   .under {
-    text-decoration : underline ;
+    text-decoration: underline;
   }
 
   .service_comment_one {
@@ -344,6 +344,9 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   font-size: 30px;
   margin-top: 10px;
   margin-bottom: 28px;
+  text-align: center;
+  text-decoration:underline;
+  text-decoration-color:#FF0000;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
 
@@ -410,6 +413,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
+  text-decoration:underline;
+  text-decoration-color:#FF0000;
 }
 
 .introduction__user{
@@ -430,7 +435,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .detail__title{
@@ -443,6 +448,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   background: #00008B;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
 
 .detail__message{
@@ -507,7 +513,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   cursor :pointer; 
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
-  
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
 }
 
 .hidden_box label:hover {
@@ -546,6 +552,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   border-collapse: collapse;
   margin-bottom: 32px;
   width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .table__col1{
@@ -569,7 +577,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
 .user__card {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
