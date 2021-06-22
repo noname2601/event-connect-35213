@@ -1,6 +1,6 @@
 <%# プロフィール情報表示 %>
 <div class="card">
-  <%= link_to image_tag(introduction.image, class: :card__img ),introduction_path(introduction) %>
+  <%= link_to image_tag(introduction.image.variant(resize: '300x200'), class: :card__img ),introduction_path(introduction) %>
    <div class="card__body">
      performer skill <%= link_to introduction.skill, introduction_path(introduction), class: :card__title%>
    </div>
