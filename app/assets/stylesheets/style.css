@@ -39,7 +39,7 @@ a {
 .header {
   background-color:#EEEEEE;
   padding: 25px 0;
-  border: 1px black solid;
+  border: 1px black solid;  
 }
 
 .inner {
@@ -71,7 +71,6 @@ a {
   border-radius: 3px;
   transition: 0.4s ease;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-
 }
 
 .nav__btn{
@@ -365,12 +364,15 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
 
 .card__img {
   margin-bottom: 16px;
-  max-width: 300px;
-  max-height: 300px;
+  width: 40vh;
+  height: 30vh;
   object-fit: cover;
   opacity: 1;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+  padding: 4px;
+  border: 6px solid black;
+  background-color: #FF0000;
   }
 
   .card__img:hover {
@@ -403,6 +405,10 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   display: inline-block;
 }
 
+.performer skill {
+  text-align: center;
+}
+
 /* 詳細ページ */
 .introduction__wrapper{
   min-height: calc(100vh - 161px);
@@ -413,6 +419,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   font-weight: bold;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px;
   text-decoration:underline;
   text-decoration-color:#FF0000;
 }
@@ -428,7 +435,10 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
 .introduction__image{
   width: 40%;
   margin: 0 auto;
-  padding: 16px 0;
+  margin-top: 10px;
+  padding: 4px;
+  border: 6px solid black;
+  background-color: #FF0000;
 }
 
 .introduction__detail{
@@ -445,7 +455,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   padding: 0.5em 1em;
   margin: 2em 0;
   color: #FFF;
-  background: #00008B;
+  background: #888888;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   border-radius: 9px;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
