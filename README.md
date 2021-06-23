@@ -39,6 +39,7 @@ Things you may want to cover:
  
 - has_many :introduction 
 - has_many :messages
+- has_many :likes
 
 ## introductions テーブル
 
@@ -54,6 +55,7 @@ Things you may want to cover:
 
 - belongs_to :performer
 - has_many :messages
+- has_many :likes
 
 ## messages テーブル
 
@@ -69,6 +71,21 @@ Things you may want to cover:
 
 - belongs_to :performer
 - belongs_to :introduction
+
+## likes テーブル
+
+| Column          | Type       | Options                      |
+| ----------------| -----------| ---------------------------- |
+| performer_id    | references | null: false,foreign_key:true |
+| introduction_id | references | null: false,foreign_key:true |
+
+
+
+### Association
+
+- belongs_to :performer
+- belongs_to :introduction
+
 
 
 
