@@ -1,14 +1,18 @@
 <%# プロフィール情報表示 %>
 <div class="card">
-  <%= link_to image_tag(introduction.image.variant(resize: '300x300'), class: :card__img ),introduction_path(introduction) %>
-  <div class= "performer skill">
-    performer skill
-    </div>
-   <div class="card__body">
-      <%= link_to introduction.skill, introduction_path(introduction), class: :card__title%>
+ <div class="profile_image">
+   <%= link_to image_tag(introduction.image.variant(resize: '300x300'), class: :card__img ),introduction_path(introduction) %>
+   <div class= "performer_skill">
+     performer skill
    </div>
+     <div class="card__body">
+       <%= link_to introduction.skill, introduction_path(introduction), class: :card__title%>
+    </div>
+    <div class="like_count">
     <div id="likes_buttons_<%= introduction.id %>">
      <%= render partial: 'likes/like', locals: { introduction: introduction} %>
+     </div>
     </div>
+  </div>
 </div>
 <%# /プロフィール情報表示 %>

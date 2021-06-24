@@ -1,15 +1,12 @@
 <%# 検索ページ表示 %>
-<main class="main">
-  <div class= "search_title">
-   検索画面
-  </div> 
-  <div class="card__wrapper">
-    <% @introductions.each do |introduction| %>
-      <%= render partial: 'introduction', locals: { introduction: introduction } %>
-      <% end %>
+  <main class="main">
+ <div class="inner">
+    <div class="card__wrapper">
+     <%= render partial: 'introduction', collection: @introductions %>
     </div>
-  </div>
+ </div>
 </main>
+
 <div class="turn_back">
  <%= link_to "トップページへ戻る", root_path, class: :turn_back %>
 </div>

@@ -355,6 +355,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   justify-content: space-between;
   align-items: center;
   min-height: calc(100vh - 161px);
+  margin-top: 10px;
 }
 
 .card {
@@ -385,7 +386,6 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   margin-bottom: 8px;
   font-weight: bold;
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  text-align: center; 
 }
 
 .card__title:hover {
@@ -401,13 +401,24 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   padding-top: 10px;
 }
 
-.card__body {
-  display: inline-block;
+.profile_image {
+  display: flex;
+  flex-direction: column;
 }
 
-.performer skill {
-  text-align: center;
+.performer_skill {
+ text-align: center;
 }
+
+.card__body {
+  text-align: center;
+  text-decoration: underline; 
+ }
+
+ .like_count {
+   text-align: center;
+   text-decoration: underline; 
+ }
 
 /* 詳細ページ */
 .introduction__wrapper{
@@ -430,6 +441,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
   color: #FF3333;
   text-align: center;
   text-decoration: underline;
+  margin-top: 5px;
 }
 
 .introduction__image{
@@ -751,7 +763,7 @@ h1 {
 
 .footer {
   background-color: #EEEEEE;
-  padding: 20px 0;
+  padding: 30px 0;
   bottom: 0; 
   width: 100%;
 }
