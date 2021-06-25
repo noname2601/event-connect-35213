@@ -1,6 +1,7 @@
 class IntroductionsController < ApplicationController
-  before_action :set_introduction, except: [:index, :new, :create, :search]
-  before_action :authenticate_performer!, except: [:index, :show, :search]
+  before_action :set_introduction, except: [:index, :new, :create, :genre]
+  before_action :search_genre_introduction, only: [:index, :genre, :show]
+  before_action :authenticate_performer!, except: [:index, :show, :genre]
   before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
@@ -47,20 +48,29 @@ class IntroductionsController < ApplicationController
     end
   end
 
-  def search
-    @introductions = Introduction.search(params[:search])
+  #def search
+    #@introductions = Introduction.search(params[:search])
+  #end
+
+  def genre
+    @introduction = @q.result
+    genre_id = params[:q][:genre_id_eq]
+    @genre = Genre.find_by(id: genre_id)
   end
+
   
-
-
   private
 
   def introduction_params
-    params.require(:introduction).permit(:skill, :description, :twitter_id, :image).merge(performer_id: current_performer.id)
+    params.require(:introduction).permit(:genre_id, :description, :twitter_id, :image).merge(performer_id: current_performer.id)
   end 
 
   def set_introduction
     @introduction = Introduction.find(params[:id])
+  end
+
+  def search_genre_introduction
+    @q = Introduction.ransack(params[:q])
   end
 
   def contributor_confirmation
