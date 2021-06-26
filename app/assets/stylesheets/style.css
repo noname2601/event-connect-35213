@@ -605,9 +605,11 @@ font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', Yu
 
 /* 検索ページ */
 
-.search_title {
-  font-size: 20px;
+.performer_genre {
   padding: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', YuGothic, 'Yu Gothic Medium', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  text-align: center;
+  text-decoration: underline solid red;
 }
 
 .turn_back {

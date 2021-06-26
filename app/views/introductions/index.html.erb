@@ -57,10 +57,11 @@
    <li class="service_comment">パフォーマーを</li>
    <li class="service_comment">見つけよう！</li>
    <%# パフォーマー検索ボタン %>
-   <%= form_tag(search_introductions_path,:method => 'get') do %>
-   <%= text_field_tag :search %>
-   <%= submit_tag '検索', :name=> nil %>
-   <% end %>
+   <%= search_form_for @q, url: introduction_genre_path do |f| %>
+   <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name, include_blank: "パフォーマー検索" %>
+   <%= f.submit '検索' %>
+   <% end %> 
+   </div>
    <%# /パフォーマー検索ボタン %>
  </ul>
 </div>

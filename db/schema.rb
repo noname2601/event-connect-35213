@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_06_19_082431) do
   end
 
   create_table "introductions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "skill", null: false
+    t.integer "genre_id", null: false
     t.text "description", null: false
     t.string "twitter_id", null: false
     t.integer "performer_id", null: false

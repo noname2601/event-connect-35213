@@ -2,18 +2,13 @@
 <html>
   <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="message_channel.js"></script>
- 
     <title>EventConnect</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
-
   </head>
-  
   <body>
   <header class="header">
       <div class="inner">
@@ -21,23 +16,12 @@
           <div class="nav__left">
             <%= link_to "EVENT CONNECT",root_path %>
           </div>
-
-          <div class="nav__center">
-          <%= form_tag(search_introductions_path,:method => 'get') do %>
-          <%= text_field_tag :search %>
-          <%= submit_tag '検索', :name=> nil %>
-          <% end %>
-         </div>
-
-
-
           <% if performer_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_performer_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "プロフィール投稿", new_introduction_path, class: :nav__btn %>
             </div>
           <% else %>
-          
             <div class="nav__right">
               <%= link_to "ログイン", new_performer_session_path, class: :nav__btn %>
               <%= link_to "新規登録", new_performer_registration_path, class: :nav__btn %>
