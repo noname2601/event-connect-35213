@@ -54,6 +54,7 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :performer
+- belongs_to :genre
 - has_many :messages
 - has_many :likes
 
@@ -85,6 +86,21 @@ Things you may want to cover:
 
 - belongs_to :performer
 - belongs_to :introduction
+
+## genres テーブル
+
+| Column          | Type       | Options                      |
+| ----------------| -----------| ---------------------------- |
+| performer_id    | references | null: false,foreign_key:true |
+| introduction_id | references | null: false,foreign_key:true |
+
+
+
+### Association
+
+- belongs_to :introduction
+- has_many :performers
+
 
 
 
