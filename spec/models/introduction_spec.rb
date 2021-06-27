@@ -19,10 +19,15 @@ describe "プロフィール投稿機能" do
       @introduction.valid?
       expect(@introduction.errors.full_messages).to include("画像を入力してください")
     end
-    it "スキルが必須であること" do
-      @introduction.skill = ""
+    it "パフォーマンスの種類選択が必須であること" do
+      @introduction.genre_id = ""
       @introduction.valid?
-      expect(@introduction.errors.full_messages).to include("スキルを入力してください")
+      expect(@introduction.errors.full_messages).to include("パフォーマンスのジャンルを入力してください")
+    end
+    it "パフォーマンスの種類選択が1以外で入力すること" do
+      @introduction.genre_id = "1"
+      @introduction.valid?
+      expect(@introduction.errors.full_messages).to include("パフォーマンスのジャンルは1以外の値にしてください")
     end
     it "説明が必須であること" do
       @introduction.description = ""

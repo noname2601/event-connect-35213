@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :introduction do
-    skill        {"バルーンアート"}
+    genre_id        {2}
     description  {"風船作れます"}
     twitter_id   {"@tarou1234"}
     association :performer
