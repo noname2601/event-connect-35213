@@ -19,6 +19,7 @@ class Genre < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :introductions
+  belongs_to :introductions
+  has_many :performer
 
   end

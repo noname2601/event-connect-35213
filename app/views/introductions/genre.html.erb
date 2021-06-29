@@ -1,26 +1,32 @@
 <%# 検索ページ表示 %>
-  <div class="main">
-  <div class="inner">
+<div class="main">
+ <div class="inner">
     <div class="form__wrapper">
-    <h2 class="performer_genre"> <%= @genre.name %>のパフォーマーさん 一覧  </h2>
-
-    <div class="genre_coment">
-    気になる画像をクリックしてください。詳細ページに移動します！
-    </div>
-  <%# パフォーマー検索ボタン %>
-   <%= search_form_for @q, url: introduction_genre_path do |f| %>
-   <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name, include_blank: "パフォーマー検索" %>
-   <%= f.submit '検索' %>
-   <% end %> 
-   <%# /パフォーマー検索ボタン %>
-  
-    <% @introduction.each do |introduction| %>
-    <%= link_to image_tag(introduction.image,  class: :'card__img'),introduction_path(introduction) if introduction.image.attached? %>
-    <% end %>
-<div class="turn_back">
- <%= link_to "トップページへ戻る", root_path, class: :turn_back %>
-</div>
- </div>
+      <h2 class="performer_genre"> <%= @genre.name %>のパフォーマー   </h2>
+      <div class="genre_comment">
+      <%# 条件分岐で表示する文章を切り替え%>
+       <% if @introduction.present? %>
+       気になる画像をクリックしてください。詳細ページに移動します。
+       <% else %>
+       投稿画像はありません。別のジャンルで検索してみてください。
+       <% end %>
+       <%# /条件分岐で表示する文章を切り替え%>
+       <%# パフォーマー検索ボタン %>
+       <div class="performer_search">
+         <%= search_form_for @q, url: introduction_genre_path do |f| %>
+         <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name %>
+         <%= f.submit '検索' %>
+         <% end %> 
+        </div>
+       <%# /パフォーマー検索ボタン %>
+       <% @introduction.each do |introduction| %>
+       <%= link_to image_tag(introduction.image,  class: :'card__img'),introduction_path(introduction) if introduction.image.attached? %>
+       <% end %>
+       <div class="turn_back">
+         <%= link_to "トップページへ戻る", root_path, class: :turn_back %>
+       </div>
+     </div>
+   </div>
   </div>
 </div>
 <%# /検索ページ表示 %>

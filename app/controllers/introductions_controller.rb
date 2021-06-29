@@ -17,16 +17,14 @@ class IntroductionsController < ApplicationController
     if @introduction.valid?
        @introduction.save
        redirect_to root_path
-    else
+      else
       render :new
-    end
+    end 
   end
 
   def show
     @message = Message.new
     @messages = @introduction.messages
-    
-    
   end
 
   def edit
@@ -47,10 +45,6 @@ class IntroductionsController < ApplicationController
       redirect_to root_path
     end
   end
-
-  #def search
-    #@introductions = Introduction.search(params[:search])
-  #end
 
   def genre
     @introduction = @q.result

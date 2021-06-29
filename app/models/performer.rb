@@ -14,5 +14,6 @@ class Performer < ApplicationRecord
   has_many :messages
   has_many :likes, dependent: :destroy
   has_many :like_introduction, through: :likes, source: :introduction
+  has_many :genres
 end
 

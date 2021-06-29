@@ -14,7 +14,6 @@ class Introduction < ApplicationRecord
    validates :image
   end
 
-  
   def liked_by?(performer)
     likes.where(performer_id: performer.id).exists?
   end

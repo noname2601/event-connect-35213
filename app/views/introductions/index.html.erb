@@ -35,7 +35,7 @@
 <div class="service">
   <ul>
    <%= image_tag "cytonn-photography-n95VMLxqM2I-unsplash.jpg",  class:"servise_image_one" %>
-   <li class="service_comment_one">1.繋がる</li>
+   <li class="service_comment_one">1.  繋がる</li>
    <li class="service_comment">リンク先のツィッターアカウント</li>
    <li class="service_comment">から繋がれます。</li>
    <li class="service_comment">気になる人をお気に入りに</li>
@@ -44,7 +44,7 @@
   </ul>
   <ul>
    <%= image_tag "sofiya-levchenko-l6yLVM-FJxc-unsplash.jpg",  class:"servise_image_two" %>
-   <li class="service_comment_one">2 .コメント投稿機能</li>
+   <li class="service_comment_one">2. コメント投稿機能</li>
    <li class="service_comment">プロフィール画像のリンクから</li>
    <li class="service_comment">コメントが投稿できます。</li>
    <li class="service_comment">気になるパフォーマーに</li>
@@ -52,13 +52,13 @@
   </ul>
   <ul>
    <%= image_tag "benjamin-dada-EDZTb2SQ6j0-unsplash.jpg",  class:"servise_image_three" %>
-   <li class="service_comment_one">3 .簡単検索</li>
+   <li class="service_comment_one">3. 簡単検索</li>
    <li class="service_comment">イベント内容に合った</li>
    <li class="service_comment">パフォーマーを</li>
    <li class="service_comment">見つけよう！</li>
    <%# パフォーマー検索ボタン %>
    <%= search_form_for @q, url: introduction_genre_path do |f| %>
-   <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name, include_blank: "パフォーマー検索" %>
+   <%= f.collection_select :genre_id_eq, Genre.where.not(id: 0), :id, :name %>
    <%= f.submit '検索' %>
    <% end %> 
    </div>
