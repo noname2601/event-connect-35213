@@ -1,3 +1,4 @@
+<%#お気に入り登録数を部分テンプレートで表示%>
 <% if performer_signed_in? %>
     <% if introduction.liked_by?(current_performer) %>
      <p><span>お気に入り解除: </span><%=link_to introduction.likes.count, introduction_likes_path(introduction.id), method: :delete, remote: true %></p>
@@ -5,5 +6,6 @@
         <p><span>お気に入りに追加: </span><%=link_to introduction.likes.count, introduction_likes_path(introduction.id), method: :post, remote: true %></p>
     <% end %>
      <% else %>
-    <p><span>お気に入り数: </span><%= introduction.likes.count %></p>
+    <p><span>お気に入り登録数 : </span><%= introduction.likes.count %></p>
 <% end %>
+<%# /お気に入り登録数を部分テンプレートで表示%>

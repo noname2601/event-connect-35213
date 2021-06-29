@@ -8,7 +8,7 @@ ja:
         name: 名前
         name_kana: 名前（カナヨミ）
       introduction:
-        skill: スキル
+        genre_id: パフォーマンスのジャンル
         description: 特技の説明
         twitter_id: ツイッターID
         image: 画像
