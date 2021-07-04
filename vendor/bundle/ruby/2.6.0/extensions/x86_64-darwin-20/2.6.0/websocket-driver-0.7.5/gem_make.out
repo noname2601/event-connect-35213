@@ -1,0 +1,15 @@
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/noname2601/.rbenv/versions/2.6.6/bin/ruby -I /Users/noname2601/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210704-38088-1q1ypib.rb extconf.rb
+creating Makefile
+
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20210704-38088-upe63q
