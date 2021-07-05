@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: event_connect_development
+  database: event_connect_35213_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: event_connect_test
+  database: event_connect_35213_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: event_connect_production
-  username: event_connect
-  password: <%= ENV['EVENT_CONNECT_DATABASE_PASSWORD'] %>
+  database: event_connect_35213_production
+  username: event_connect_35213
+  password: <%= ENV['event_connect_35213_DATABASE_PASSWORD'] %>
