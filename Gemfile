@@ -70,3 +70,4 @@ gem 'active_hash'
 gem 'ransack'
 
 gem 'rename'
+
