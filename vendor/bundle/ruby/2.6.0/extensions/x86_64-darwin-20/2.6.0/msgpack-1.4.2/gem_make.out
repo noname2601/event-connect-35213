@@ -1,5 +1,5 @@
-current directory: /Users/noname2601/projects/event_connect/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
-/Users/noname2601/.rbenv/versions/2.6.5/bin/ruby -I /Users/noname2601/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20210704-96575-1cycsbm.rb extconf.rb
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+/Users/noname2601/.rbenv/versions/2.6.6/bin/ruby -I /Users/noname2601/.rbenv/versions/2.6.6/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210714-11966-t6zude.rb extconf.rb
 checking for ruby/st.h... yes
 checking for st.h... yes
 checking for rb_str_replace() in ruby.h... yes
@@ -12,11 +12,11 @@ checking for rb_hash_dup() in ruby.h... yes
 checking for rb_hash_clear() in ruby.h... yes
 creating Makefile
 
-current directory: /Users/noname2601/projects/event_connect/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
-make "DESTDIR=" clean
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+make DESTDIR\= clean
 
-current directory: /Users/noname2601/projects/event_connect/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
-make "DESTDIR="
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+make DESTDIR\=
 compiling buffer.c
 compiling buffer_class.c
 compiling extension_value_class.c
@@ -38,6 +38,6 @@ static VALUE Unpacker_peek_next_type(VALUE self)
 compiling unpacker_ext_registry.c
 linking shared-object msgpack/msgpack.bundle
 
-current directory: /Users/noname2601/projects/event_connect/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
-make "DESTDIR=" install
-/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20210704-96575-ko1z82/msgpack
+current directory: /Users/noname2601/projects/event-connect-35213/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20210714-11966-es0kj8/msgpack
