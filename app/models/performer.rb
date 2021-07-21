@@ -15,5 +15,8 @@ class Performer < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :like_introduction, through: :likes, source: :introduction
   has_many :genres
+  def already_liked?(introduction)
+    self.likes.exists?(introduction_id: introduction.id)
+  end
 end
 
