@@ -38,13 +38,13 @@ https://event-connect-35213.herokuapp.com/
 : Ruby on Rails 6.0.0  
 
 
-## トップ画面 
+
+
+## 機能一覧
 
 ・ トップ画面全体
 
-[![Image from Gyazo](https://i.gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce.gif)](https://gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce)
-
-## 機能一覧
+[![Image from Gyazo](https://i.gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce.gif)](https://gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce)  
 
 ・ 新規登録 ログイン機能(devise)  
 
