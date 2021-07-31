@@ -5,7 +5,7 @@
 
 ## トップ画面   
 
-[![Image from Gyazo](https://i.gyazo.com/30952e491a961e0e01289f0a2400401d.gif)](https://gyazo.com/30952e491a961e0e01289f0a2400401d)
+[![Image from Gyazo](https://i.gyazo.com/6cab46bec424d54cf45639e8250f4a6b.gif)](https://gyazo.com/6cab46bec424d54cf45639e8250f4a6b)
 
 ## アプリケーションの概要
 パフォーマンスを仕事とする演者の方を支援・紹介するマッチング・サービスです。
