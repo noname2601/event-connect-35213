@@ -42,7 +42,7 @@ https://event-connect-35213.herokuapp.com/
 
 ・ トップ画面全体
 
-[![Image from Gyazo](https://i.gyazo.com/6cab46bec424d54cf45639e8250f4a6b.gif)](https://gyazo.com/6cab46bec424d54cf45639e8250f4a6b)
+[![Image from Gyazo](https://i.gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce.gif)](https://gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce)
 
 ## 機能一覧
 
