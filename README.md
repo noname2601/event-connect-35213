@@ -3,9 +3,6 @@
 ## アプリケーション名
 「EVENT-CONNECT」
 
-## トップ画面   
-
-[![Image from Gyazo](https://i.gyazo.com/6cab46bec424d54cf45639e8250f4a6b.gif)](https://gyazo.com/6cab46bec424d54cf45639e8250f4a6b)
 
 ## アプリケーションの概要
 パフォーマンスを仕事とする演者の方を支援・紹介するマッチング・サービスです。
@@ -41,6 +38,11 @@ https://event-connect-35213.herokuapp.com/
 : Ruby on Rails 6.0.0  
 
 
+## トップ画面 
+
+・ トップ画面全体
+
+[![Image from Gyazo](https://i.gyazo.com/6cab46bec424d54cf45639e8250f4a6b.gif)](https://gyazo.com/6cab46bec424d54cf45639e8250f4a6b)
 
 ## 機能一覧
 
