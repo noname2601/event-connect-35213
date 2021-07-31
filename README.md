@@ -42,9 +42,9 @@ https://event-connect-35213.herokuapp.com/
 
 ## 機能一覧
 
-・ トップ画面全体
+・ トップ画面
 
-[![Image from Gyazo](https://i.gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce.gif)](https://gyazo.com/cbc5487d0e4f3b6c095d327a40a2d3ce)  
+[![Image from Gyazo](https://i.gyazo.com/6ed49175ac2228afeeb7b89587160b9f.jpg)](https://gyazo.com/6ed49175ac2228afeeb7b89587160b9f)
 
 ・ 新規登録 ログイン機能(devise)  
 
