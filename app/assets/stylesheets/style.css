@@ -852,10 +852,48 @@ h1 {
   .card__summary {
     font-size: 14px;
   }
-  .prototype_image{
+  .introduction_image{
     width: 100%;
   }
   .table{
     width: 100%;
   }
+  .service-title{
+    font-size: 14px;
+  }
+  .service-explain{
+    font-size: 14px;
+  }
+  .top_image{
+    width: 130%;
+  }
+  .nav{
+    font-size: 14px;
+  }
+  .performers_view{
+    width: 100%;
+  }
+  .performers_image{
+    width: 100%;
+  }
+  .service_features_one{
+    font-size: 15px;
+  }
+  .service_features{
+    font-size: 20px;
+  }
+ .service_comment_one{
+   font-size: 20px;
+ }
+ .service_comment{
+   font-size: 10px;
+ }
+ .profile_list{
+   font-size: 20px;
+ }
+ .profile_image{
+   display: flex;
+  align-items: center;
+ }
+ 
 }
